@@ -1,0 +1,15 @@
+test
+query   "query":{"match_all":{}}
+runs    50
+error_count 0
+real	0m0.702s
+user	0m0.232s
+sys	0m0.452s
+
+query   {"query":{"range":{"f8b1f618eb3c3942ec41d52f49210fb4":{"gte":2320009027036418,"lt":2364476974132175}}}}
+runs    50
+error_count 0
+real	0m29.584s
+user	0m0.267s
+sys	0m0.312s
+

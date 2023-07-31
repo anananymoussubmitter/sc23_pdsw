@@ -1,0 +1,21 @@
+query   "query":{"match_all":{}}
+runs    50
+error_count 0
+real	0m0.890s
+user	0m0.271s
+sys	0m0.369s
+
+query   {"query":{"range":{"total_amount":{"gte":5,"lt":15}}}}
+runs    50
+error_count 0
+real	0m4.992s
+user	0m0.284s
+sys	0m0.408s
+
+query   {"size":0,"query":{"bool":{"filter":{"range":{"trip_distance":{"lt":50,"gte":0}}}}},"aggs":{"distance_histo":{"histogram":{"field":"trip_distance","interval":1},"aggs":{"total_amount_stats":{"stats":{"field":"total_amount"}}}}}}
+runs    50
+error_count 0
+real	5m15.538s
+user	0m0.346s
+sys	0m0.481s
+

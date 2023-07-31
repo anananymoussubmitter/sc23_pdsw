@@ -1,0 +1,20 @@
+{
+ "rally-version": "2.8.0",
+ "rally-revision": null,
+ "environment": "local",
+ "race-id": "634bdcdf-a879-4963-b157-c462fff28541",
+ "race-timestamp": "20230729T091422Z",
+ "pipeline": "benchmark-only",
+ "user-tags": {},
+ "track": "nyc_taxis_encrypted_ingest_only_1",
+ "car": [
+  "external"
+ ],
+ "cluster": {
+  "revision": "f67ef2df40237445caa70e2fef79471cc608d70d",
+  "distribution-version": "8.6.0",
+  "distribution-flavor": "default",
+  "team-revision": null
+ },
+ "challenge": "append-no-conflicts"
+}

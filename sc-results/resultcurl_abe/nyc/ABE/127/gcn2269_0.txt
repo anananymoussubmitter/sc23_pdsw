@@ -1,0 +1,17 @@
+./benchmark_nyc_127.sh: line 53: 08: value too great for base (error token is "08")
+sleep: invalid option -- '3'
+Try 'sleep --help' for more information.
+query   "query":{"match_all":{}}
+runs    50
+error_count 0
+real	0m0.836s
+user	0m0.256s
+sys	0m0.364s
+
+query   {"query":{"range":{"f8b1f618eb3c3942ec41d52f49210fb4":{"gte":2320009027036418,"lt":2364476974132175}}}}
+runs    50
+error_count 0
+real	0m7.275s
+user	0m0.271s
+sys	0m0.377s
+

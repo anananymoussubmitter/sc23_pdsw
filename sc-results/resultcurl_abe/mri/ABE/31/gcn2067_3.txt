@@ -1,0 +1,42 @@
+query   {"query":{"match_all":{}}}
+runs    250
+error_count 0
+real	0m23.126s
+user	0m1.301s
+sys	0m2.003s
+
+query   {"query":{"term":{"b4da414e32193ee295394be6219e4d30":"298c1336ba36eb8da0c1c430f00865e7"}}}
+runs    250
+error_count 0
+real	0m29.339s
+user	0m1.286s
+sys	0m2.006s
+
+query   {"query":{"match_phrase":{"06afa2d7b35183672a6c93bbaff11356":"771941e14252ba396f353b875533d14c"}}}
+runs    250
+error_count 0
+real	0m27.390s
+user	0m1.310s
+sys	0m2.025s
+
+query   {"query":{"range":{"042b0e2c3af11ba16e11eb8fd5f5fcda":{"gte":1149927854,"lt":1342197701}}}}
+runs    250
+error_count 0
+real	0m13.302s
+user	0m1.305s
+sys	0m2.052s
+
+query   {"query":{"bool":{"must":[{"term":{"b4da414e32193ee295394be6219e4d30":"298c1336ba36eb8da0c1c430f00865e7"}},{"term":{"84084cc05b8ac4cf5d07aa71cbb78adf":546723516}},{"term":{"23368ee5999d172ce38626232aa6b937":546723516}}]}}}
+runs    250
+error_count 0
+real	0m23.727s
+user	0m1.320s
+sys	0m2.036s
+
+query   {"query":{"bool":{"must":[{"term":{"b4da414e32193ee295394be6219e4d30":"298c1336ba36eb8da0c1c430f00865e7"}},{"bool":{"should":[{"bool":{"must":[{"term":{"06afa2d7b35183672a6c93bbaff11356":"771941e14252ba396f353b875533d14c"}},{"match":{"656ba589d1435e9fdba5e88364eb9bbc":"0a7c9a74c61635d0928e6f339e8b8718"}}]}},{"bool":{"must":[{"term":{"06afa2d7b35183672a6c93bbaff11356":"923ca158fe2e2b5ede29a03620208b68"}},{"match":{"656ba589d1435e9fdba5e88364eb9bbc":"63341a287f5cd401e7ec857f6b7d44c4"}}]}}]}}]}}}
+runs    250
+error_count 0
+real	0m17.146s
+user	0m1.330s
+sys	0m2.061s
+

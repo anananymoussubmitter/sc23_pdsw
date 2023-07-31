@@ -1,0 +1,295 @@
+{
+ "rally-version": "2.8.0",
+ "rally-revision": null,
+ "environment": "local",
+ "race-id": "b2b59a0b-313c-4925-b0e9-0dff512e4a71",
+ "race-timestamp": "20230729T194223Z",
+ "pipeline": "benchmark-only",
+ "user-tags": {},
+ "track": "nyc_taxis_encrypted_1",
+ "car": [
+  "external"
+ ],
+ "cluster": {
+  "revision": "f67ef2df40237445caa70e2fef79471cc608d70d",
+  "distribution-version": "8.6.0",
+  "distribution-flavor": "default",
+  "team-revision": null
+ },
+ "results": {
+  "op_metrics": [
+   {
+    "task": "index",
+    "operation": "index",
+    "throughput": {
+     "min": 6187.199141579918,
+     "mean": 6569.800868352188,
+     "median": 6620.408662891554,
+     "max": 6667.015353673816,
+     "unit": "docs/s"
+    },
+    "latency": {
+     "50_0": 1277.4089760205243,
+     "90_0": 1368.6065630463418,
+     "99_0": 1478.4183063340604,
+     "99_9": 3965.659092632996,
+     "99_99": 5828.610556187686,
+     "100_0": 6134.092346997932,
+     "mean": 1301.5343536850644,
+     "unit": "ms"
+    },
+    "service_time": {
+     "50_0": 1277.4089760205243,
+     "90_0": 1368.6065630463418,
+     "99_0": 1478.4183063340604,
+     "99_9": 3965.659092632996,
+     "99_99": 5828.610556187686,
+     "100_0": 6134.092346997932,
+     "mean": 1301.5343536850644,
+     "unit": "ms"
+    },
+    "processing_time": {
+     "50_0": 1303.204269031994,
+     "90_0": 1395.1892375189345,
+     "99_0": 1508.6558886890996,
+     "99_9": 3985.9986920887604,
+     "99_99": 5857.200643898943,
+     "100_0": 6154.6575329848565,
+     "mean": 1327.2149110723542,
+     "unit": "ms"
+    },
+    "error_rate": 0.0,
+    "duration": 24605401.40455804
+   },
+   {
+    "task": "default_no_target",
+    "operation": "default",
+    "throughput": {
+     "min": 72.4504767616092,
+     "mean": 72.4504767616092,
+     "median": 72.4504767616092,
+     "max": 72.4504767616092,
+     "unit": "ops/s"
+    },
+    "latency": {
+     "50_0": 7.776211510645226,
+     "90_0": 8.873041509650648,
+     "99_0": 11.375274222227754,
+     "100_0": 12.925932998768985,
+     "mean": 8.03634143609088,
+     "unit": "ms"
+    },
+    "service_time": {
+     "50_0": 7.776211510645226,
+     "90_0": 8.873041509650648,
+     "99_0": 11.375274222227754,
+     "100_0": 12.925932998768985,
+     "mean": 8.03634143609088,
+     "unit": "ms"
+    },
+    "processing_time": {
+     "50_0": 9.007437998661771,
+     "90_0": 10.153801110573113,
+     "99_0": 12.527187136583969,
+     "100_0": 14.058139000553638,
+     "mean": 9.243210321292281,
+     "unit": "ms"
+    },
+    "error_rate": 0.0,
+    "duration": 1752.3056409554556
+   },
+   {
+    "task": "default",
+    "operation": "default",
+    "throughput": {
+     "min": 3.0193953950018306,
+     "mean": 3.031585155362234,
+     "median": 3.0287689083949743,
+     "max": 3.0558451342099264,
+     "unit": "ops/s"
+    },
+    "latency": {
+     "50_0": 8.904823480406776,
+     "90_0": 9.535017429152504,
+     "99_0": 10.061505248304464,
+     "100_0": 11.579368670936674,
+     "mean": 8.803872663993388,
+     "unit": "ms"
+    },
+    "service_time": {
+     "50_0": 6.242216506507248,
+     "90_0": 6.604170805076137,
+     "99_0": 7.555666898260824,
+     "100_0": 7.607927022036165,
+     "mean": 6.14553973893635,
+     "unit": "ms"
+    },
+    "processing_time": {
+     "50_0": 7.496650534449145,
+     "90_0": 8.0560733738821,
+     "99_0": 10.114505570381882,
+     "100_0": 10.324046947062016,
+     "mean": 7.4480636266525835,
+     "unit": "ms"
+    },
+    "error_rate": 0.0,
+    "duration": 49674.283765023574
+   },
+   {
+    "task": "default_1k",
+    "operation": "default_1k",
+    "throughput": {
+     "min": 3.0162364646000013,
+     "mean": 3.026470808768092,
+     "median": 3.024136055090199,
+     "max": 3.0467004223818077,
+     "unit": "ops/s"
+    },
+    "latency": {
+     "50_0": 43.098606140119955,
+     "90_0": 44.27216828917153,
+     "99_0": 49.67356572451536,
+     "100_0": 51.0948549490422,
+     "mean": 43.34765491890721,
+     "unit": "ms"
+    },
+    "service_time": {
+     "50_0": 39.58143401541747,
+     "90_0": 41.08400950208306,
+     "99_0": 47.27907059306745,
+     "100_0": 48.24992298381403,
+     "mean": 39.86056792258751,
+     "unit": "ms"
+    },
+    "processing_time": {
+     "50_0": 43.981016002362594,
+     "90_0": 45.441453700186685,
+     "99_0": 51.94881079660263,
+     "100_0": 52.622487011831254,
+     "mean": 44.296803488978185,
+     "unit": "ms"
+    },
+    "error_rate": 0.0,
+    "duration": 49675.35575100919
+   },
+   {
+    "task": "range",
+    "operation": "range",
+    "throughput": {
+     "min": 1.361699674533862,
+     "mean": 1.5657051635170063,
+     "median": 1.586770942521936,
+     "max": 1.682473731351113,
+     "unit": "ops/s"
+    },
+    "latency": {
+     "50_0": 520.0432939745951,
+     "90_0": 530.1282710453961,
+     "99_0": 539.9834420997649,
+     "100_0": 542.1100670355372,
+     "mean": 520.774027974112,
+     "unit": "ms"
+    },
+    "service_time": {
+     "50_0": 520.0432939745951,
+     "90_0": 530.1282710453961,
+     "99_0": 539.9834420997649,
+     "100_0": 542.1100670355372,
+     "mean": 520.774027974112,
+     "unit": "ms"
+    },
+    "processing_time": {
+     "50_0": 521.4430065243505,
+     "90_0": 531.6509439027868,
+     "99_0": 541.8249457958154,
+     "100_0": 543.6107880086638,
+     "mean": 522.1380521182436,
+     "unit": "ms"
+    },
+    "error_rate": 0.0,
+    "duration": 83385.5829469976
+   }
+  ],
+  "total_time": 17890348,
+  "total_time_per_shard": {
+   "min": 17890348,
+   "median": 17890348,
+   "max": 17890348,
+   "unit": "ms"
+  },
+  "indexing_throttle_time": 0,
+  "indexing_throttle_time_per_shard": {
+   "min": 0,
+   "median": 0,
+   "max": 0,
+   "unit": "ms"
+  },
+  "merge_time": 17917463,
+  "merge_time_per_shard": {
+   "min": 17917463,
+   "median": 17917463,
+   "max": 17917463,
+   "unit": "ms"
+  },
+  "merge_count": 88,
+  "refresh_time": 3166450,
+  "refresh_time_per_shard": {
+   "min": 3166450,
+   "median": 3166450,
+   "max": 3166450,
+   "unit": "ms"
+  },
+  "refresh_count": 777,
+  "flush_time": 313573,
+  "flush_time_per_shard": {
+   "min": 313573,
+   "median": 313573,
+   "max": 313573,
+   "unit": "ms"
+  },
+  "flush_count": 52,
+  "merge_throttle_time": 12822995,
+  "merge_throttle_time_per_shard": {
+   "min": 12822995,
+   "median": 12822995,
+   "max": 12822995,
+   "unit": "ms"
+  },
+  "ml_processing_time": [],
+  "young_gc_time": 8987,
+  "young_gc_count": 199,
+  "old_gc_time": 0,
+  "old_gc_count": 0,
+  "zgc_cycles_gc_time": null,
+  "zgc_cycles_gc_count": null,
+  "zgc_pauses_gc_time": null,
+  "zgc_pauses_gc_count": null,
+  "memory_segments": 0,
+  "memory_doc_values": 0,
+  "memory_terms": 0,
+  "memory_norms": 0,
+  "memory_points": 0,
+  "memory_stored_fields": 0,
+  "store_size": 30247355048,
+  "translog_size": 55,
+  "segment_count": 26,
+  "total_transform_search_times": [],
+  "total_transform_index_times": [],
+  "total_transform_processing_times": [],
+  "total_transform_throughput": [],
+  "ingest_pipeline_cluster_count": 0,
+  "ingest_pipeline_cluster_time": 0,
+  "ingest_pipeline_cluster_failed": 0,
+  "disk_usage_total": [],
+  "disk_usage_inverted_index": [],
+  "disk_usage_stored_fields": [],
+  "disk_usage_doc_values": [],
+  "disk_usage_points": [],
+  "disk_usage_norms": [],
+  "disk_usage_term_vectors": []
+ },
+ "challenge": "append-no-conflicts",
+ "track-params": {
+  "ingest_percentage": 100
+ }
+}

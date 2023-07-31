@@ -1,0 +1,42 @@
+query   {"query":{"match_all":{}}}
+runs    50
+error_count 0
+real	1m13.678s
+user	0m0.284s
+sys	0m0.398s
+
+query   {"query":{"term":{"BodyPart":"Head"}}}
+runs    50
+error_count 0
+real	0m57.962s
+user	0m0.270s
+sys	0m0.415s
+
+query   {"query":{"match_phrase":{"SystemVendor":"Siemens"}}}
+runs    50
+error_count 0
+real	0m1.117s
+user	0m0.275s
+sys	0m0.382s
+
+query   {"query":{"range":{"PatientAge":{"gte":50,"lt":60}}}}
+runs    50
+error_count 0
+real	1m14.088s
+user	0m0.297s
+sys	0m0.392s
+
+query   {"query":{"bool":{"must":[{"term":{"BodyPart":"Head"}},{"term":{"KspacePhaseEnc1":256}},{"term":{"KspacePhaseEnc2":256}}]}}}
+runs    50
+error_count 0
+real	0m36.652s
+user	0m0.298s
+sys	0m0.386s
+
+query   {"query":{"bool":{"must":[{"term":{"BodyPart":"Head"}},{"bool":{"should":[{"bool":{"must":[{"term":{"SystemVendor":"Siemens"}},{"match":{"ProtocolName":"Siemens3"}}]}},{"bool":{"must":[{"term":{"SystemVendor":"GE"}},{"match":{"ProtocolName":"GE3"}}]}}]}}]}}}
+runs    50
+error_count 0
+real	0m24.108s
+user	0m0.294s
+sys	0m0.388s
+

@@ -1,0 +1,23 @@
+sleep: invalid option -- '7'
+Try 'sleep --help' for more information.
+query   "query":{"match_all":{}}
+runs    50
+error_count 0
+real	0m23.050s
+user	0m0.355s
+sys	0m0.425s
+
+query   {"query":{"range":{"total_amount":{"gte":5,"lt":15}}}}
+runs    50
+error_count 0
+real	0m31.855s
+user	0m0.286s
+sys	0m0.406s
+
+query   {"size":0,"query":{"bool":{"filter":{"range":{"trip_distance":{"lt":50,"gte":0}}}}},"aggs":{"distance_histo":{"histogram":{"field":"trip_distance","interval":1},"aggs":{"total_amount_stats":{"stats":{"field":"total_amount"}}}}}}
+runs    50
+error_count 0
+real	1m23.400s
+user	0m0.330s
+sys	0m0.434s
+

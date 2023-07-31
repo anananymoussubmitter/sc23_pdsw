@@ -1,0 +1,141 @@
+{
+ "rally-version": "2.8.0",
+ "rally-revision": null,
+ "environment": "local",
+ "race-id": "ae62f525-8a0d-42c4-b8b7-76b200234e71",
+ "race-timestamp": "20230729T114200Z",
+ "pipeline": "benchmark-only",
+ "user-tags": {},
+ "track": "mrirally_ingest_only_1",
+ "car": [
+  "external"
+ ],
+ "cluster": {
+  "revision": "f67ef2df40237445caa70e2fef79471cc608d70d",
+  "distribution-version": "8.6.0",
+  "distribution-flavor": "default",
+  "team-revision": null
+ },
+ "results": {
+  "op_metrics": [
+   {
+    "task": "index",
+    "operation": "index",
+    "throughput": {
+     "min": 2006.8257752680718,
+     "mean": 2439.290253370862,
+     "median": 2451.7416339975507,
+     "max": 2465.064065041741,
+     "unit": "docs/s"
+    },
+    "latency": {
+     "50_0": 369.9275644030422,
+     "90_0": 397.4725703243166,
+     "99_0": 509.8391651501876,
+     "99_9": 690.2917366563589,
+     "100_0": 964.0062460675836,
+     "mean": 376.0421086582355,
+     "unit": "ms"
+    },
+    "service_time": {
+     "50_0": 369.9275644030422,
+     "90_0": 397.4725703243166,
+     "99_0": 509.8391651501876,
+     "99_9": 690.2917366563589,
+     "100_0": 964.0062460675836,
+     "mean": 376.0421086582355,
+     "unit": "ms"
+    },
+    "processing_time": {
+     "50_0": 376.6219913959503,
+     "90_0": 403.98844545707107,
+     "99_0": 515.7881626021115,
+     "99_9": 696.5177885475815,
+     "100_0": 970.225612167269,
+     "mean": 382.54074234655127,
+     "unit": "ms"
+    },
+    "error_rate": 0.0,
+    "duration": 406017.90704391897
+   }
+  ],
+  "total_time": 171067293,
+  "total_time_per_shard": {
+   "min": 333268,
+   "median": 85533646.5,
+   "max": 170734025,
+   "unit": "ms"
+  },
+  "indexing_throttle_time": 1468090,
+  "indexing_throttle_time_per_shard": {
+   "min": 0,
+   "median": 734045.0,
+   "max": 1468090,
+   "unit": "ms"
+  },
+  "merge_time": 40861048,
+  "merge_time_per_shard": {
+   "min": 0,
+   "median": 20430524.0,
+   "max": 40861048,
+   "unit": "ms"
+  },
+  "merge_count": 428,
+  "refresh_time": 1661167,
+  "refresh_time_per_shard": {
+   "min": 63963,
+   "median": 830583.5,
+   "max": 1597204,
+   "unit": "ms"
+  },
+  "refresh_count": 139,
+  "flush_time": 1147147,
+  "flush_time_per_shard": {
+   "min": 148055,
+   "median": 573573.5,
+   "max": 999092,
+   "unit": "ms"
+  },
+  "flush_count": 28,
+  "merge_throttle_time": 0,
+  "merge_throttle_time_per_shard": {
+   "min": 0,
+   "median": 0.0,
+   "max": 0,
+   "unit": "ms"
+  },
+  "ml_processing_time": [],
+  "young_gc_time": 83,
+  "young_gc_count": 2,
+  "old_gc_time": 0,
+  "old_gc_count": 0,
+  "zgc_cycles_gc_time": null,
+  "zgc_cycles_gc_count": null,
+  "zgc_pauses_gc_time": null,
+  "zgc_pauses_gc_count": null,
+  "memory_segments": 0,
+  "memory_doc_values": 0,
+  "memory_terms": 0,
+  "memory_norms": 0,
+  "memory_points": 0,
+  "memory_stored_fields": 0,
+  "store_size": 29734992051,
+  "translog_size": 593891051,
+  "segment_count": 48,
+  "total_transform_search_times": [],
+  "total_transform_index_times": [],
+  "total_transform_processing_times": [],
+  "total_transform_throughput": [],
+  "ingest_pipeline_cluster_count": 0,
+  "ingest_pipeline_cluster_time": 0,
+  "ingest_pipeline_cluster_failed": 0,
+  "disk_usage_total": [],
+  "disk_usage_inverted_index": [],
+  "disk_usage_stored_fields": [],
+  "disk_usage_doc_values": [],
+  "disk_usage_points": [],
+  "disk_usage_norms": [],
+  "disk_usage_term_vectors": []
+ },
+ "challenge": "everything-no-throttling"
+}

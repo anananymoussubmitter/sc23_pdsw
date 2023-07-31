@@ -1,0 +1,16 @@
+./benchmark_nyc_31.sh: line 53: 09: value too great for base (error token is "09")
+./benchmark_nyc_31.sh: line 53: 09: value too great for base (error token is "09")
+query   "query":{"match_all":{}}
+runs    50
+error_count 0
+real	0m1.281s
+user	0m0.372s
+sys	0m0.499s
+
+query   {"query":{"range":{"f8b1f618eb3c3942ec41d52f49210fb4":{"gte":2320009027036418,"lt":2364476974132175}}}}
+runs    50
+error_count 0
+real	0m6.023s
+user	0m0.292s
+sys	0m0.445s
+
