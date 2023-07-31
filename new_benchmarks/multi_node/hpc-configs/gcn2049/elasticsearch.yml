@@ -1,0 +1,7 @@
+cluster.name: secure-data-lake
+node.name: gcn2049
+node.roles: ["data", "master"]
+network.host: 10.241.130.49
+cluster.initial_master_nodes: ["10.241.130.49"]
+discovery.seed_hosts: ["10.241.130.49"]
+xpack.security.enabled: false

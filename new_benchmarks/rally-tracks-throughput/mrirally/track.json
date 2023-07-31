@@ -1,0 +1,438 @@
+{
+  "version": 2,
+  "description": "Mocked MRI Data",
+  "indices": [
+    {
+      "name": "mrirally",
+      "body": "index.json"
+    }
+  ],
+  "corpora": [
+    {
+      "name": "mockmri-corpus",
+      "documents": [
+        {
+          "source-file": "data.json",
+          "document-count": 1000000,
+          "uncompressed-bytes": 1603271004
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "name": "index",
+      "operation-type": "bulk",
+      "ingest-percentage": {{ingest_percentage | default(100)}},
+      "bulk-size": 1000
+    },
+    {
+      "name": "default",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "match_all": {}
+        }
+      },
+      "cache": false
+    },
+    {
+      "name": "default_1k",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "match_all": {}
+        }
+      },
+      "size": 1000,
+      "cache": false
+    },
+    {
+      "name": "term",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "term": {
+            "BodyPart": "Head"
+          }
+        }
+      }
+    },
+    {
+      "name": "phrase",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "match_phrase": {
+            "SystemVendor": "Siemens"
+          }
+        }
+      }
+    },
+    {
+      "name": "range",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "range": {
+            "PatientAge": {
+              "gte": 50,
+              "lt": 60
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "real_query_1",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "BodyPart": "Head"
+                }
+              },
+              {
+                "term": {
+                  "KspacePhaseEnc1": 256
+                }
+              },
+              {
+                "term": {
+                  "KspacePhaseEnc2": 256
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "real_query_2",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "bool": {
+            "filter": {
+              "script": {
+                "script": "doc['BrainAge'].value - doc['PatientAge'].value >= 5"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "real_query_3",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "BodyPart": "Head"
+                }
+              },
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "SystemVendor": "Siemens"
+                            }
+                          },
+                          {
+                            "match": {
+                              "ProtocolName": "Siemens3"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "SystemVendor": "GE"
+                            }
+                          },
+                          {
+                            "match": {
+                              "ProtocolName": "GE3"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "term_encrypted",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "term": {
+            "b4da414e32193ee295394be6219e4d30": "298c1336ba36eb8da0c1c430f00865e7"
+          }
+        }
+      }
+    },
+    {
+      "name": "phrase_encrypted",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "match_phrase": {
+            "06afa2d7b35183672a6c93bbaff11356": "771941e14252ba396f353b875533d14c"
+          }
+        }
+      }
+    },
+    {
+      "name": "range_encrypted",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "range": {
+            "042b0e2c3af11ba16e11eb8fd5f5fcda": {
+              "gte": 1149927854,
+              "lt": 1342197701
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "real_query_1_encrypted",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "b4da414e32193ee295394be6219e4d30": "298c1336ba36eb8da0c1c430f00865e7"
+                }
+              },
+              {
+                "term": {
+                 "84084cc05b8ac4cf5d07aa71cbb78adf": 546723516
+                }
+              },
+              {
+                "term": {
+                 "23368ee5999d172ce38626232aa6b937": 546723516
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "real_query_3_encrypted",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "b4da414e32193ee295394be6219e4d30": "298c1336ba36eb8da0c1c430f00865e7"
+                }
+              },
+              {
+                "bool": {
+                  "should": [
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "06afa2d7b35183672a6c93bbaff11356": "771941e14252ba396f353b875533d14c"
+                            }
+                          },
+                          {
+                            "match": {
+                              "656ba589d1435e9fdba5e88364eb9bbc": "0a7c9a74c61635d0928e6f339e8b8718"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "bool": {
+                        "must": [
+                          {
+                            "term": {
+                              "06afa2d7b35183672a6c93bbaff11356": "923ca158fe2e2b5ede29a03620208b68"
+                            }
+                          },
+                          {
+                            "match": {
+                              "656ba589d1435e9fdba5e88364eb9bbc": "63341a287f5cd401e7ec857f6b7d44c4"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "challenges": [
+    {
+      "name": "everything-no-throttling",
+      "description": "Starting with some basic queries, then proceeding to the actual realistic ones",
+      "default": true,
+      "schedule": [
+        {
+          "operation": {
+            "operation-type": "delete-index"
+          }
+        },
+        {
+          "operation": {
+            "operation-type": "create-index"
+          }
+        },
+        {
+          "operation": {
+            "operation-type": "cluster-health",
+            "request-params": {
+              "wait_for_status": "green"
+            },
+            "retry-until-success": true
+          }
+        },
+        {
+          "operation": "index"
+        },
+        {
+          "operation": "default",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "default_1k",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "term",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "phrase",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "range",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "real_query_1",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "real_query_2",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "real_query_3",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        }
+      ]
+    },
+    {
+      "name": "encrypted-no-throttling",
+      "description": "The same queries, but expecting an attribute based encrypted corpus",
+      "default": false,
+      "schedule": [
+        {
+          "operation": {
+            "operation-type": "delete-index"
+          }
+        },
+        {
+          "operation": {
+            "operation-type": "create-index"
+          }
+        },
+        {
+          "operation": {
+            "operation-type": "cluster-health",
+            "request-params": {
+              "wait_for_status": "green"
+            },
+            "retry-until-success": true
+          }
+        },
+        {
+          "operation": "index"
+        },
+        {
+          "operation": "default",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "default_1k",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "term_encrypted",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "phrase_encrypted",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "range_encrypted",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "real_query_1_encrypted",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        },
+        {
+          "operation": "real_query_3_encrypted",
+          "warmup-iterations": 50,
+          "iterations": 1000
+        }
+      ]
+    }
+  ]
+}
+

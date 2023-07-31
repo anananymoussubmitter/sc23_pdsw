@@ -1,0 +1,20 @@
+{"dropoff_datetime": "2015-01-01 00:38:34"}
+{"trip_type": "str"}
+{"mta_tax": 0.5}
+{"rate_code_id": "1"}
+{"passenger_count": 1}
+{"pickup_datetime": "2015-01-01 00:34:42"}
+{"tolls_amount": 0.0}
+{"tip_amount": 0.0}
+{"payment_type": "2"}
+{"extra": 0.5}
+{"vendor_id": "2"}
+{"store_and_fwd_flag": "N"}
+{"improvement_surcharge": 0.3}
+{"fare_amount": 5.0}
+{"cab_color": "str"}
+{"dropoff_location": [-73.91363525390625,40.76552200317383]}
+{"vendor_name": "str"}
+{"total_amount": 6.3}
+{"trip_distance": 0.88}
+{"pickup_location": [-73.92259216308594,40.7545280456543]}

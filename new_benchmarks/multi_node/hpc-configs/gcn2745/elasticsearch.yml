@@ -1,0 +1,7 @@
+cluster.name: secure-data-lake
+node.name: gcn2745
+node.roles: ["data"]
+network.host: 10.241.132.233
+cluster.initial_master_nodes: ["10.241.132.48"]
+discovery.seed_hosts: ["10.241.132.48"]
+xpack.security.enabled: false

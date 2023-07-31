@@ -1,0 +1,19 @@
+# Leave the folder there
+/gocrypt/*
+!/gocrypt/.gitkeep
+/luks/*
+!/luks/.gitkeep
+/plain/*
+!/plain/.gitkeep
+
+# vim...
+*.swp
+
+# new_benchmark has its own gitignore
+#new_benchmarks/
+
+# Should be rebuilt nonetheless
+Python/
+
+# Unused, different cluster, different HW
+results_dfa/

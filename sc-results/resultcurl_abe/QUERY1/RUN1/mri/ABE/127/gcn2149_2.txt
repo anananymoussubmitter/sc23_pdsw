@@ -1,0 +1,4 @@
+sleep: invalid option -- '1'
+Try 'sleep --help' for more information.
+query   {"query":{"match_all":{}}}
+runs    250

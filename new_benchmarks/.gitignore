@@ -1,0 +1,6 @@
+# container build files
+docker*.tar.gz
+singularity*.sif
+
+# ES data
+./single_node/data/*

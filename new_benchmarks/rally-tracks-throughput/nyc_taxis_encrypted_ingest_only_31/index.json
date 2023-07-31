@@ -1,0 +1,86 @@
+{
+  "settings": {
+    "index.number_of_shards": {{number_of_shards | default(31)}},
+    "index.number_of_replicas": {{number_of_replicas | default(0)}},
+    "index.requests.cache.enable": false
+  },
+  "mappings": {
+    "_source": {
+      "mode": {{ source_mode | default("stored") | tojson }}
+
+    },
+    "properties": {
+      "surcharge": {
+        "scaling_factor": 100,
+        "type": "scaled_float"
+      },
+      "f2f3d37288af52c023f9e07d6c2b9192631b04f6ac137cfec6b28b68eaff0675": {
+        "type": "unsigned_long"
+      },
+      "fb75626a4bd43780d483326932644de1": {
+        "type": "keyword"
+      },
+      "159deff63921288fb827a559c742d82b": {
+        "type": "unsigned_long"
+      },
+      "a5f7036cc4011ac4f5a74d160caa27b6": {
+        "type": "keyword"
+      },
+      "6d66e389b236456938c5bf3692c62dbc": {
+        "type": "unsigned_long"
+      },
+      "172c11dfa2bd35a08aee1702e9fbd116": {
+        "type": "unsigned_long"
+      },
+      "565cef35583528064be6cc9142d98e0a": {
+        "type": "unsigned_long"
+      },
+      "501bcce922eb1bb6d05c0bc09356688d": {
+        "type": "unsigned_long"
+      },
+      "b56e77eee499a330dccb2fda9ed05ab5": {
+        "type": "keyword"
+      },
+      "9a8f3f1db262f1b4937979cb1ba09e5f": {
+        "type": "unsigned_long"
+      },
+      "cb4f732249a2c7e06b735f11aaeb9731": {
+        "type": "keyword"
+      },
+      "65f207042402d9d8bcf033f158c931a13e7705d1962fa4d8eb67ea2355bc70b9": {
+        "type": "keyword"
+      },
+      "c8ac8bf827b66a818f12a5a164a8b8df784df3042d9ce8be16764c2f9df5e93c": {
+        "type": "unsigned_long"
+      },
+      "0e7e6e11ddd72f7e017cfce5a1ee041d": {
+        "type": "unsigned_long"
+      },
+      "ehail_fee": {
+        "scaling_factor": 100,
+        "type": "scaled_float"
+      },
+      "4a43a18b7b90705433d4f7d072a0fab6": {
+        "type": "keyword"
+      },
+      "3ec79ac5d40907dcf805be997b84ce486dae5e3b6588d9433e6170a72cb7e220": {
+        "type": "unsigned_long"
+      },
+      "725b3ca20704e07bd9043b3a301da3bb": {
+        "type": "text"{% if source_mode == "synthetic" %},
+        "store": true
+        {% endif %}
+      },
+      "f8b1f618eb3c3942ec41d52f49210fb4": {
+        "type": "unsigned_long"
+      },
+      "60835aa5ab5b9d1abffb72e4fb2f34e9": {
+        "type": "unsigned_long"
+      },
+      "4a2d7bc0805eddcfd66597c69aee46d5": {
+        "type": "unsigned_long"
+      }
+    },
+    "dynamic": "strict"
+  }
+}
